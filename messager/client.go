@@ -58,8 +58,7 @@ func sendMessage(client RouteGuideClient) error {
 func RunClient(serverAddr, userName string) {
 	name = userName
 	var opts []grpc.DialOption
-	grpc.W
-	opts = append(opts, grpc.WithStreamInterceptor())
+	opts = append(opts, grpc.WithInsecure())
 	opts = append(opts, grpc.WithBlock())
 
 	for {
