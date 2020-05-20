@@ -24,7 +24,7 @@ func sendx(stream RouteGuide_SendMessageClient) {
 		message := new(Message)
 		s := string(msg)
 		message.Message = s
-		message.UserName = "user"
+		message.UserName = name
 		err = stream.Send(message)
 		if err != nil {
 			return
