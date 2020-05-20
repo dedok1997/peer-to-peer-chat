@@ -1,0 +1,15 @@
+syntax = "proto3";
+package messager;
+//service RouteGuide {
+//    rpc SendMessage(Message) returns (Ok) {}
+//}
+
+service RouteGuide {
+    rpc SendMessage(stream Message) returns (stream Message);
+}
+
+message Message{
+    string message = 1;
+    string userName = 2;
+}
+
